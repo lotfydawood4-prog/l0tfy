@@ -76,7 +76,7 @@
 .msg-icon{width:18px;height:18px;fill:oklch(72% .12 200)}
 .msg-ai-label{position:absolute;top:-7px;right:-7px;background:linear-gradient(90deg,#ff4500,#ff8c00);color:#fff;font-size:.52rem;font-weight:900;padding:2px 6px;border-radius:99px;letter-spacing:.08em}
 .msg-dot{position:absolute;bottom:5px;right:5px;width:7px;height:7px;border-radius:50%;background:#25D366;box-shadow:0 0 8px #25D366;animation:blink 1.8s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}@keyframes slideIn{from{opacity:0;transform:translateX(-50%) translateY(-20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
 /* ⚙️ زرار الإعدادات */
 .settings-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:14px;border:1px solid oklch(45% .12 200/.7);background:linear-gradient(135deg,oklch(20% .08 150/.8),oklch(20% .08 245/.8));cursor:pointer;transition:transform .3s,box-shadow .2s;color:oklch(78% .06 200);font-size:1.1rem}
@@ -104,12 +104,12 @@
 .theme-slider::before{content:'🌙';position:absolute;top:50%;left:4px;transform:translateY(-50%);font-size:.85rem;line-height:1;transition:.3s}
 input:checked+.theme-slider{background:linear-gradient(135deg,#e53935,#ff6b35);border-color:#e53935;box-shadow:0 0 16px rgba(229,57,53,.4)}
 input:checked+.theme-slider::before{content:'☀️';left:28px}
-body.day-mode{--bg:#f2f2f2;--text:#111;--text-soft:#333;--muted:#666;--border:rgba(200,0,0,.3);--green:#e53935;--blue:#c62828;--orange:#ff5722;--shadow:0 8px 32px rgba(0,0,0,.1);--glow-green:0 0 24px rgba(229,57,53,.35);--glow-blue:0 0 24px rgba(198,40,40,.25)}
-body.day-mode{background:linear-gradient(180deg,#f2f2f2,#ebebeb) !important}
+body.day-mode{--bg:#fff;--text:#111;--text-soft:#333;--muted:#555;--border:rgba(200,0,0,.35);--green:#c62828;--blue:#b71c1c;--orange:#f9a825;--shadow:0 8px 32px rgba(0,0,0,.1);--glow-green:0 0 24px rgba(198,40,40,.4);--glow-blue:0 0 24px rgba(249,168,37,.3)}
+body.day-mode{background:#fff !important}
 body.day-mode .smoke-layer,body.day-mode .spark-layer,body.day-mode .lightning{opacity:0 !important}
 body.day-mode .topbar{background:rgba(255,255,255,.9) !important;border-bottom-color:rgba(200,0,0,.2) !important}
 body.day-mode .gate-card,body.day-mode .welcome-card,body.day-mode .welcome-message,body.day-mode .lcard{background:linear-gradient(180deg,#fff,#fafafa) !important;border-color:rgba(200,0,0,.2) !important}
-body.day-mode .panel,body.day-mode .pc,body.day-mode .hero-shell{background:linear-gradient(180deg,#fff,#f8f8f8) !important;border-color:rgba(200,0,0,.18) !important}
+body.day-mode .panel,body.day-mode .pc,body.day-mode .hero-shell{background:linear-gradient(180deg,#fff,#fffde7) !important;border-color:rgba(198,40,40,.25) !important}
 body.day-mode .chatbot-panel{background:linear-gradient(180deg,#fff,#fafafa) !important;border-color:rgba(200,0,0,.2) !important}
 body.day-mode .chatbot-body,body.day-mode .chatbot-inputbar,body.day-mode .chatbot-quick{background:#fafafa !important}
 body.day-mode .chat-msg.bot{background:#f0f0f0 !important;border-color:rgba(200,0,0,.15) !important;color:#111 !important}
@@ -120,7 +120,7 @@ body.day-mode .fc,body.day-mode .sp-b{background:#f5f5f5 !important;border-color
 body.day-mode .fi{background:linear-gradient(180deg,#fff,#f8f8f8) !important;border-color:rgba(200,0,0,.15) !important}
 body.day-mode .chrt{background:#fff !important;border-color:rgba(200,0,0,.18) !important}
 body.day-mode .diet-tab,body.day-mode .pt-tab{background:#f0f0f0 !important;color:#444 !important;border-color:rgba(200,0,0,.2) !important}
-body.day-mode .diet-tab.on,body.day-mode .pt-tab.on{background:linear-gradient(135deg,#e53935,#c62828) !important;color:#fff !important}
+body.day-mode .diet-tab.on,body.day-mode .pt-tab.on{background:linear-gradient(135deg,#c62828,#f9a825) !important;color:#fff !important}
 body.day-mode .meal-item{background:#fff !important;border-color:rgba(200,0,0,.2) !important}
 body.day-mode .meal-header{background:#fafafa !important}
 body.day-mode .dc{background:linear-gradient(180deg,#fff,#f8f8f8) !important;border-color:rgba(200,0,0,.18) !important}
@@ -131,7 +131,7 @@ body.day-mode .et input{background:#f5f5f5 !important;border-color:rgba(200,0,0,
 body.day-mode .settings-modal{background:linear-gradient(180deg,#fff,#fafafa) !important;border-color:rgba(200,0,0,.2) !important}
 body.day-mode .settings-modal h2{color:#111}
 body.day-mode .theme-toggle-row{background:#f5f5f5 !important;border-color:rgba(200,0,0,.18) !important}
-body.day-mode .sec-divider span{background:linear-gradient(135deg,rgba(229,57,53,.12),rgba(198,40,40,.08)) !important;border-color:rgba(200,0,0,.25) !important;color:#333}
+body.day-mode .sec-divider span{background:linear-gradient(135deg,rgba(198,40,40,.12),rgba(249,168,37,.1)) !important;border-color:rgba(200,0,0,.3) !important;color:#111;font-weight:900}
 body.day-mode .lout,body.day-mode .settings-btn{background:#f0f0f0 !important;border-color:rgba(200,0,0,.2) !important;color:#555 !important}
 body.day-mode .lotfy-quote-box{background:linear-gradient(135deg,#fff5f5,#fff) !important;border-color:rgba(229,57,53,.3) !important}
 body.day-mode .pc .v{color:#e53935;text-shadow:0 0 12px rgba(229,57,53,.4)}
@@ -171,6 +171,53 @@ body.day-mode .quick-btn{background:#f0f0f0 !important;border-color:rgba(200,0,0
   .design-ui-credit { display: none !important; }
 }
 
+
+/* 🇪🇬 علم مصر 3D */
+.egypt-flag-wrap{display:none;position:fixed;left:-90px;top:50%;transform:translateY(-50%);z-index:888;animation:flagFloat 4s ease-in-out infinite;filter:drop-shadow(4px 4px 12px rgba(0,0,0,.35));transition:left .4s ease}
+.egypt-flag-wrap-r{display:none;position:fixed;right:-90px;top:50%;transform:translateY(-50%);z-index:888;animation:flagFloat 4s ease-in-out infinite;animation-delay:.5s;filter:drop-shadow(-4px 4px 12px rgba(0,0,0,.35));transition:right .4s ease}
+body.day-mode .egypt-flag-wrap{display:block;left:0}
+body.day-mode .egypt-flag-wrap-r{display:block;right:0}
+@keyframes flagFloat{0%,100%{transform:translateY(-50%) translateY(0) rotate(-1deg)}33%{transform:translateY(-50%) translateY(-10px) rotate(1deg)}66%{transform:translateY(-50%) translateY(-5px) rotate(-0.5deg)}}
+
+/* 🔥 لهب */
+.flag-flame{position:fixed;bottom:0;left:8px;z-index:887;display:none;pointer-events:none}
+.flag-flame-r{position:fixed;bottom:0;right:8px;z-index:887;display:none;pointer-events:none}
+body.day-mode .flag-flame,body.day-mode .flag-flame-r{display:block}
+.flame-canvas{width:50px;height:100px}
+
+/* وضع النهار gradient أحمر-أصفر على topbar */
+body.day-mode .topbar{background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,253,231,.95)) !important;border-bottom:2px solid rgba(198,40,40,.3) !important}
+body.day-mode .topbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#ce1126,#f9a825,#000,#f9a825,#ce1126)}
+.topbar{position:relative}
+body.day-mode .pc .v{color:#c62828;text-shadow:0 0 16px rgba(249,168,37,.6)}
+body.day-mode .settings-save-btn{background:linear-gradient(135deg,#c62828,#f9a825) !important}
+body.day-mode .ab{border-color:rgba(198,40,40,.4) !important;color:#c62828 !important}
+
+.upload-tile img{width:100%;height:100%;object-fit:cover;border-radius:16px;position:absolute;top:0;left:0}
+.upload-tile{position:relative;min-height:160px;overflow:hidden;cursor:pointer}
+.upload-tile-label{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:99px;white-space:nowrap;z-index:2}
+
+.plan-ex-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.plan-ex-row:last-child{border-bottom:none}
+.plan-ex-name{font-weight:800;font-size:.85rem;color:var(--text);min-width:130px;flex:1}
+.plan-ex-inputs{display:flex;gap:6px;align-items:center}
+.plan-ex-inp{width:56px;padding:5px 8px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:.8rem;font-family:inherit;text-align:center;outline:none}
+.plan-ex-inp:focus{border-color:#e53935}
+.plan-ex-lbl{font-size:.7rem;color:var(--muted);font-weight:700}
+.plan-ex-prog{font-size:.72rem;font-weight:900;padding:2px 8px;border-radius:99px;margin-right:4px}
+.plan-ex-prog.up{background:rgba(76,175,80,.15);color:#4caf50}
+.plan-ex-prog.same{background:rgba(100,100,100,.1);color:var(--muted)}
+
+/* 🎯 Accordion التمارين */
+.plan-ex-accordion{margin-top:8px}
+.plan-ex-acc-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(135deg,oklch(18% .03 215/.9),oklch(14% .03 205/.92));color:var(--text);font-size:.88rem;font-weight:800;cursor:pointer;font-family:inherit;transition:.2s;margin-bottom:4px}
+.plan-ex-acc-btn:hover{border-color:#e53935;background:linear-gradient(135deg,oklch(20% .04 25/.3),oklch(18% .03 215/.9))}
+.plan-ex-acc-btn .acc-arrow{transition:transform .3s;font-size:1rem}
+.plan-ex-acc-btn.open .acc-arrow{transform:rotate(180deg)}
+.plan-ex-acc-body{display:none;padding:8px 4px 4px;animation:fadeIn .2s ease}
+.plan-ex-acc-body.open{display:block}
+body.day-mode .plan-ex-acc-btn{background:linear-gradient(135deg,#f5f5f5,#fff);border-color:rgba(200,0,0,.2)}
+body.day-mode .plan-ex-acc-btn:hover{border-color:#e53935;background:linear-gradient(135deg,rgba(229,57,53,.08),#fff)}
 </style>
 <script>
 (function () {
@@ -232,7 +279,18 @@ img{max-width:100%;display:block}
 .topbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:oklch(10% .03 220/.74);backdrop-filter:blur(16px);border-bottom:1px solid oklch(34% .06 200/.65)}.topbar .br{display:flex;align-items:center;gap:10px;font-size:1rem;font-weight:900}.topbar .av{width:30px;height:30px;border-radius:50%;overflow:hidden;border:2px solid var(--green)}.lout{padding:7px 12px;border-radius:14px;border:1px solid oklch(34% .06 200/.7);background:linear-gradient(180deg,oklch(18% .03 210/.9),oklch(14% .03 205/.92));color:var(--text-soft);font-size:.72rem;font-weight:700;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease)}.lout:hover{transform:translateY(-2px)}
 .toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%) translateY(70px);background:linear-gradient(180deg,oklch(20% .06 170/.95),oklch(16% .05 220/.95));border:1px solid oklch(48% .12 195/.85);color:var(--text);padding:10px 24px;border-radius:999px;font-size:.82rem;font-weight:800;z-index:1000;transition:transform .4s var(--ease);pointer-events:none}.toast.show{transform:translateX(-50%) translateY(0)}
 .app-wrap{display:none}.app-wrap.active{display:block}.app{max-width:1000px;margin:0 auto;padding:90px 20px 80px;position:relative;z-index:2}
-.hero-shell{border-radius:38px;padding:32px;position:relative;overflow:hidden;margin-bottom:30px;background:linear-gradient(145deg,oklch(16% .055 210/.92),oklch(10% .045 180/.94));border:1px solid var(--border);box-shadow:var(--shadow)}.hero-main-img{width:min(100%,300px);aspect-ratio:1/1;border-radius:50%;margin:0 auto 24px;overflow:hidden;border:4px solid oklch(50% .12 200/.7);box-shadow:var(--shadow),var(--glow-green),var(--glow-blue);position:relative;z-index:1}
+.hero-shell{border-radius:38px;padding:32px;position:relative;overflow:visible;margin-bottom:30px;background:linear-gradient(145deg,oklch(16% .055 210/.92),oklch(10% .045 180/.94));border:2px solid rgba(255,50,0,.5);box-shadow:0 0 30px rgba(255,40,0,.2),inset 0 0 30px rgba(255,40,0,.05);border:1px solid var(--border);box-shadow:var(--shadow)}.hero-main-img{width:min(100%,300px);aspect-ratio:1/1;border-radius:50%;margin:0 auto 24px;overflow:hidden;position:relative;z-index:1;
+border:4px solid #ff2200;
+box-shadow:
+  0 0 0 2px #ff4400,
+  0 0 18px 4px #ff2200,
+  0 0 40px 10px rgba(255,60,0,.6),
+  0 0 80px 20px rgba(255,30,0,.3),
+  0 0 120px 40px rgba(200,0,0,.15);
+animation:fireGlow 2s ease-in-out infinite alternate}
+@keyframes fireGlow{
+  0%{box-shadow:0 0 0 2px #ff4400,0 0 18px 4px #ff2200,0 0 40px 10px rgba(255,60,0,.6),0 0 80px 20px rgba(255,30,0,.3),0 0 120px 40px rgba(200,0,0,.15);border-color:#ff2200}
+  100%{box-shadow:0 0 0 2px #ff8800,0 0 28px 8px #ff6600,0 0 60px 18px rgba(255,120,0,.7),0 0 100px 30px rgba(255,60,0,.4),0 0 150px 50px rgba(200,30,0,.2);border-color:#ff6600}}
 .hero-copy{text-align:center;position:relative;z-index:1}.hero-copy h1{font-size:clamp(3rem,10vw,5.8rem);font-weight:900;line-height:.85;letter-spacing:-.05em;margin-bottom:14px}.hero-copy .tag{font-size:.75rem;color:var(--text-soft);letter-spacing:.1em;margin:14px 0 24px;font-weight:700}.hero-copy .ml{font-size:clamp(.85rem,2vw,1.1rem);font-weight:700;color:var(--green);margin-bottom:10px}.hero-copy .ms{font-size:clamp(1rem,2.5vw,1.4rem);font-weight:900;line-height:1.8;margin-bottom:32px}
 .soc-row,.footer .fs{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.soc-row a,.footer .fs a{display:flex;align-items:center;justify-content:center;text-decoration:none;width:48px;height:48px;border-radius:16px;border:1px solid oklch(38% .08 200/.7);background:linear-gradient(180deg,oklch(18% .03 215/.9),oklch(14% .03 205/.92));transition:transform .25s var(--ease)}.soc-row a:hover,.footer .fs a:hover{transform:translateY(-3px)}.soc-row svg,.footer .fs svg{width:20px;height:20px;fill:currentColor}.soc-row a[href*='wa.me']{color:#25D366;box-shadow:0 0 20px rgba(37,211,102,.25)}.soc-row a[href*='tiktok']{color:#f8f8f8;box-shadow:-3px 0 18px rgba(37,244,238,.2),3px 0 18px rgba(254,44,85,.2)}.soc-row a[href*='tiktok'] svg{filter:drop-shadow(-2px 0 #25F4EE) drop-shadow(2px 0 #FE2C55)}.soc-row a[href*='instagram']{color:#E1306C;box-shadow:0 0 18px rgba(225,48,108,.22)}
 .sec-divider{display:flex;align-items:center;gap:14px;margin:48px 0 18px}.sec-divider::before,.sec-divider::after{content:'';flex:1;height:2px;border-radius:99px;background:linear-gradient(90deg,transparent,oklch(44% .11 200/.8))}.sec-divider::after{background:linear-gradient(90deg,oklch(44% .11 200/.8),transparent)}.sec-divider span{font-size:.68rem;color:var(--text-soft);font-weight:900;letter-spacing:.14em;white-space:nowrap;text-transform:uppercase;padding:.5rem .9rem;border-radius:999px;background:linear-gradient(135deg,oklch(20% .07 150/.82),oklch(20% .07 245/.82));border:1px solid oklch(48% .12 195/.85)}.sec-sub{font-size:.8rem;margin-bottom:18px;font-weight:700}
@@ -249,6 +307,53 @@ img{max-width:100%;display:block}
 .footer{text-align:center;padding:38px 16px;border-top:1px solid oklch(34% .06 200/.65);margin-top:30px}.footer h3{font-size:1rem;font-weight:900;margin-bottom:4px}
 .chatbot-wrap{position:fixed;left:18px;bottom:18px;z-index:1200;display:flex;flex-direction:column;align-items:flex-start;gap:10px}.chatbot-toggle{width:64px;height:64px;padding:0;border-radius:22px;display:grid;place-items:center;font-size:1.35rem}.chatbot-panel{width:min(92vw,380px);display:none;flex-direction:column;border-radius:24px;overflow:hidden}.chatbot-panel.open{display:flex}.chatbot-head{padding:14px 16px;background:linear-gradient(135deg,oklch(20% .08 150),oklch(20% .08 245));display:flex;align-items:center;justify-content:space-between;gap:10px}.chatbot-head strong{font-size:.95rem}.chatbot-head span{font-size:.68rem;color:oklch(96% .01 200/.9)}.chatbot-body{padding:14px;height:330px;overflow:auto;display:flex;flex-direction:column;gap:10px;background:linear-gradient(180deg,oklch(14% .035 210/.9),oklch(12% .035 200/.88))}.chat-msg{max-width:88%;padding:10px 12px;border-radius:16px;font-size:.82rem;line-height:1.8}.chat-msg.bot{align-self:flex-start;background:linear-gradient(180deg,oklch(18% .04 215/.95),oklch(14% .03 205/.95));border:1px solid var(--border);color:var(--text)}.chat-msg.user{align-self:flex-end;background:linear-gradient(135deg,oklch(20% .08 150/.9),oklch(20% .08 245/.9));color:var(--text)}.chatbot-quick{padding:0 14px 12px;display:flex;flex-wrap:wrap;gap:8px;background:linear-gradient(180deg,oklch(14% .035 210/.9),oklch(12% .035 200/.88))}.quick-btn{padding:7px 10px;border-radius:999px;border:1px solid oklch(38% .08 200/.7);background:linear-gradient(180deg,oklch(18% .03 215/.9),oklch(14% .03 205/.92));color:var(--text-soft);font:700 .68rem 'Cairo',sans-serif;cursor:pointer;transition:all .2s var(--ease)}.quick-btn:hover{border-color:var(--green);color:var(--text)}.chatbot-inputbar{display:flex;gap:8px;padding:12px;border-top:1px solid oklch(34% .06 200/.65);background:linear-gradient(180deg,oklch(15% .03 210/.95),oklch(12% .03 200/.95))}.chatbot-input{flex:1;padding:12px 14px;border-radius:14px;border:1px solid oklch(42% .06 205/.8);background:linear-gradient(180deg,oklch(18% .03 215/.9),oklch(14% .03 205/.92));color:var(--text);font:700 .82rem 'Cairo',sans-serif}.chatbot-send{padding:12px 14px;font-size:.82rem}
 @media(max-width:720px){.ba-grid{grid-template-columns:1fr}.hero-shell{padding:18px}.hero-main-img{width:200px;height:200px}.chatbot-wrap{left:12px;right:12px;bottom:12px;align-items:stretch}.chatbot-panel{width:100%}}
+
+/* 🇪🇬 علم مصر 3D */
+.egypt-flag-wrap{display:none;position:fixed;left:-90px;top:50%;transform:translateY(-50%);z-index:888;animation:flagFloat 4s ease-in-out infinite;filter:drop-shadow(4px 4px 12px rgba(0,0,0,.35));transition:left .4s ease}
+.egypt-flag-wrap-r{display:none;position:fixed;right:-90px;top:50%;transform:translateY(-50%);z-index:888;animation:flagFloat 4s ease-in-out infinite;animation-delay:.5s;filter:drop-shadow(-4px 4px 12px rgba(0,0,0,.35));transition:right .4s ease}
+body.day-mode .egypt-flag-wrap{display:block;left:0}
+body.day-mode .egypt-flag-wrap-r{display:block;right:0}
+@keyframes flagFloat{0%,100%{transform:translateY(-50%) translateY(0) rotate(-1deg)}33%{transform:translateY(-50%) translateY(-10px) rotate(1deg)}66%{transform:translateY(-50%) translateY(-5px) rotate(-0.5deg)}}
+
+/* 🔥 لهب */
+.flag-flame{position:fixed;bottom:0;left:8px;z-index:887;display:none;pointer-events:none}
+.flag-flame-r{position:fixed;bottom:0;right:8px;z-index:887;display:none;pointer-events:none}
+body.day-mode .flag-flame,body.day-mode .flag-flame-r{display:block}
+.flame-canvas{width:50px;height:100px}
+
+/* وضع النهار gradient أحمر-أصفر على topbar */
+body.day-mode .topbar{background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,253,231,.95)) !important;border-bottom:2px solid rgba(198,40,40,.3) !important}
+body.day-mode .topbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#ce1126,#f9a825,#000,#f9a825,#ce1126)}
+.topbar{position:relative}
+body.day-mode .pc .v{color:#c62828;text-shadow:0 0 16px rgba(249,168,37,.6)}
+body.day-mode .settings-save-btn{background:linear-gradient(135deg,#c62828,#f9a825) !important}
+body.day-mode .ab{border-color:rgba(198,40,40,.4) !important;color:#c62828 !important}
+
+.upload-tile img{width:100%;height:100%;object-fit:cover;border-radius:16px;position:absolute;top:0;left:0}
+.upload-tile{position:relative;min-height:160px;overflow:hidden;cursor:pointer}
+.upload-tile-label{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:99px;white-space:nowrap;z-index:2}
+
+.plan-ex-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.plan-ex-row:last-child{border-bottom:none}
+.plan-ex-name{font-weight:800;font-size:.85rem;color:var(--text);min-width:130px;flex:1}
+.plan-ex-inputs{display:flex;gap:6px;align-items:center}
+.plan-ex-inp{width:56px;padding:5px 8px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:.8rem;font-family:inherit;text-align:center;outline:none}
+.plan-ex-inp:focus{border-color:#e53935}
+.plan-ex-lbl{font-size:.7rem;color:var(--muted);font-weight:700}
+.plan-ex-prog{font-size:.72rem;font-weight:900;padding:2px 8px;border-radius:99px;margin-right:4px}
+.plan-ex-prog.up{background:rgba(76,175,80,.15);color:#4caf50}
+.plan-ex-prog.same{background:rgba(100,100,100,.1);color:var(--muted)}
+
+/* 🎯 Accordion التمارين */
+.plan-ex-accordion{margin-top:8px}
+.plan-ex-acc-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(135deg,oklch(18% .03 215/.9),oklch(14% .03 205/.92));color:var(--text);font-size:.88rem;font-weight:800;cursor:pointer;font-family:inherit;transition:.2s;margin-bottom:4px}
+.plan-ex-acc-btn:hover{border-color:#e53935;background:linear-gradient(135deg,oklch(20% .04 25/.3),oklch(18% .03 215/.9))}
+.plan-ex-acc-btn .acc-arrow{transition:transform .3s;font-size:1rem}
+.plan-ex-acc-btn.open .acc-arrow{transform:rotate(180deg)}
+.plan-ex-acc-body{display:none;padding:8px 4px 4px;animation:fadeIn .2s ease}
+.plan-ex-acc-body.open{display:block}
+body.day-mode .plan-ex-acc-btn{background:linear-gradient(135deg,#f5f5f5,#fff);border-color:rgba(200,0,0,.2)}
+body.day-mode .plan-ex-acc-btn:hover{border-color:#e53935;background:linear-gradient(135deg,rgba(229,57,53,.08),#fff)}
 </style>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
@@ -268,7 +373,95 @@ img{max-width:100%;display:block}
 <div class="limg"><img src="https://i.ibb.co/nN5RV7F2/5895471328712658541-119.jpg"></div>
 <h1>LOTFY</h1>
 <p class="lsub">⚡ سجّل يعجل منك ليه عشان تخس</p><div id="lf"><input class="lf" id="le" placeholder="الإيميل بتاعك" type="email"><input class="lf" id="lp" placeholder="كلمة السر" type="password"><button class="lbtn" onclick="hL()">⚡ تسجيل الدخول</button><p class="lerr" id="lerr"></p><p class="lsw">مفيش حساب؟ <a onclick="document.getElementById('lf').style.display='none';document.getElementById('rf').style.display='block'">سجّل جديد</a></p></div><div id="rf" style="display:none"><input class="lf" id="rn" placeholder="اسمك"><input class="lf" id="re" placeholder="حط ايميلك يدبابه" type="email"><input class="lf" id="rp" placeholder="كلمه السر ومتنسهاش يحونش" type="password"><input class="lf" id="rp2" placeholder="أكد كلمة السر" type="password"><button class="lbtn" onclick="hR()">🔥 إنشاء حساب</button><p class="lerr" id="rerr"></p><p class="lsw">عندك حساب؟ <a onclick="document.getElementById('rf').style.display='none';document.getElementById('lf').style.display='block'">دخول</a></p></div></div></div>
-<div class="app-wrap" id="aw"><div class="topbar"><span class="br"><span class="av"><img src="https://i.ibb.co/nN5RV7F2/5895471328712658541-119.jpg"></span>LOTFY</span><div style="display:flex;align-items:center;gap:10px"><span class="un" id="tn"></span><div class="msg-icon-wrap" onclick="toggleChatbot()" title="AI Chat"><span class="msg-ai-label">AI</span><svg class="msg-icon" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg><span class="msg-dot"></span></div><button class="settings-btn" onclick="openSettings()" title="الإعدادات">⚙️</button><button class="lout" onclick="doLogout()">خروج</button></div></div><div class="toast" id="toast"><span>تم الحفظ ⚡</span></div>
+<div class="app-wrap" id="aw"><div class="topbar"><span class="br"><span class="av"><img src="https://i.ibb.co/nN5RV7F2/5895471328712658541-119.jpg"></span>LOTFY</span><div style="display:flex;align-items:center;gap:10px"><span class="un" id="tn"></span><div class="msg-icon-wrap" onclick="toggleChatbot()" title="AI Chat"><span class="msg-ai-label">AI</span><svg class="msg-icon" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg><span class="msg-dot"></span></div><button class="settings-btn" onclick="openSettings()" title="الإعدادات">⚙️</button><button class="lout" onclick="doLogout()">خروج</button></div></div>
+<!-- 🇪🇬 علم مصر SVG 3D -->
+<div class="egypt-flag-wrap" id="egyptFlagL">
+<svg width="90" height="130" viewBox="0 0 90 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="redG" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#a00010"/><stop offset="40%" stop-color="#ce1126"/><stop offset="100%" stop-color="#8b000e"/></linearGradient>
+    <linearGradient id="whiteG" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ddd"/><stop offset="40%" stop-color="#fff"/><stop offset="100%" stop-color="#ccc"/></linearGradient>
+    <linearGradient id="blackG" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#111"/><stop offset="40%" stop-color="#333"/><stop offset="100%" stop-color="#000"/></linearGradient>
+    <filter id="flagShadow"><feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3"/></filter>
+    <!-- موجة العلم -->
+    <clipPath id="waveClip">
+      <path d="M8,0 Q20,8 8,16 Q20,24 8,32 Q20,40 8,48 Q20,56 8,64 Q20,72 8,80 Q20,88 8,96 Q20,104 8,112 Q20,120 8,128 L90,128 L90,0 Z"/>
+    </clipPath>
+  </defs>
+  <!-- عمود العلم -->
+  <rect x="0" y="0" width="8" height="130" fill="url(#blackG)" rx="2"/>
+  <rect x="1" y="0" width="3" height="130" fill="rgba(255,255,255,.15)" rx="1"/>
+  <!-- جسم العلم مع موجة -->
+  <g clip-path="url(#waveClip)" filter="url(#flagShadow)">
+    <!-- الشريط الأحمر -->
+    <path d="M8,0 Q22,5 8,10 Q22,15 8,20 Q22,25 8,30 Q22,35 8,40 L90,40 L90,0 Z" fill="url(#redG)"/>
+    <path d="M8,0 Q22,5 8,10 Q22,15 8,20 Q22,25 8,30 Q22,35 8,40 L90,40 L90,0 Z" fill="url(#redG)"/>
+    <!-- ضل على الأحمر -->
+    <path d="M8,0 L90,0 L90,40 L8,40 Z" fill="rgba(0,0,0,.08)"/>
+    <path d="M8,0 Q22,5 8,10 Q22,15 8,20 L90,20 L90,0 Z" fill="rgba(255,255,255,.06)"/>
+    <!-- الشريط الأبيض -->
+    <path d="M8,40 Q22,45 8,50 Q22,55 8,60 Q22,65 8,70 Q22,75 8,80 L90,80 L90,40 Z" fill="url(#whiteG)"/>
+    <path d="M8,40 L90,40 L90,80 L8,80 Z" fill="rgba(0,0,0,.04)"/>
+    <!-- الشريط الأسود -->
+    <path d="M8,80 Q22,85 8,90 Q22,95 8,100 Q22,105 8,110 Q22,115 8,120 Q22,125 8,130 L90,130 L90,80 Z" fill="url(#blackG)"/>
+    <path d="M8,80 L90,80 L90,130 L8,130 Z" fill="rgba(255,255,255,.04)"/>
+    <!-- نسر صلاح الدين SVG مبسط -->
+    <g transform="translate(35,48) scale(0.9)">
+      <!-- جسم النسر -->
+      <ellipse cx="10" cy="14" rx="5" ry="7" fill="#c8a415"/>
+      <!-- الجناح الأيسر -->
+      <path d="M10,10 Q-2,6 -8,14 Q-2,16 10,14" fill="#c8a415"/>
+      <!-- الجناح الأيمن -->
+      <path d="M10,10 Q22,6 28,14 Q22,16 10,14" fill="#c8a415"/>
+      <!-- الرأس -->
+      <circle cx="10" cy="6" r="4" fill="#c8a415"/>
+      <!-- المنقار -->
+      <path d="M10,8 L7,11 L10,10 Z" fill="#8b6914"/>
+      <!-- الذيل -->
+      <path d="M7,20 L10,26 L13,20" fill="#c8a415"/>
+      <!-- القاعدة -->
+      <rect x="5" y="24" width="10" height="3" rx="1" fill="#c8a415"/>
+      <!-- بريق -->
+      <ellipse cx="8" cy="5" rx="1.5" ry="1" fill="rgba(255,255,200,.4)"/>
+    </g>
+  </g>
+</svg>
+</div>
+<div class="egypt-flag-wrap-r" id="egyptFlagR">
+<svg width="90" height="130" viewBox="0 0 90 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="redG2" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#a00010"/><stop offset="40%" stop-color="#ce1126"/><stop offset="100%" stop-color="#8b000e"/></linearGradient>
+    <linearGradient id="whiteG2" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#ddd"/><stop offset="40%" stop-color="#fff"/><stop offset="100%" stop-color="#ccc"/></linearGradient>
+    <linearGradient id="blackG2" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#111"/><stop offset="40%" stop-color="#333"/><stop offset="100%" stop-color="#000"/></linearGradient>
+    <clipPath id="waveClip2">
+      <path d="M82,0 Q70,8 82,16 Q70,24 82,32 Q70,40 82,48 Q70,56 82,64 Q70,72 82,80 Q70,88 82,96 Q70,104 82,112 Q70,120 82,128 L0,128 L0,0 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#waveClip2)">
+    <path d="M82,0 Q68,5 82,10 Q68,15 82,20 Q68,25 82,30 Q68,35 82,40 L0,40 L0,0 Z" fill="url(#redG2)"/>
+    <path d="M0,0 L90,0 L90,40 L0,40 Z" fill="rgba(0,0,0,.08)"/>
+    <path d="M82,0 Q68,5 82,10 Q68,15 82,20 L0,20 L0,0 Z" fill="rgba(255,255,255,.06)"/>
+    <path d="M82,40 Q68,45 82,50 Q68,55 82,60 Q68,65 82,70 Q68,75 82,80 L0,80 L0,40 Z" fill="url(#whiteG2)"/>
+    <path d="M0,40 L90,40 L90,80 L0,80 Z" fill="rgba(0,0,0,.04)"/>
+    <path d="M82,80 Q68,85 82,90 Q68,95 82,100 Q68,105 82,110 Q68,115 82,120 Q68,125 82,130 L0,130 L0,80 Z" fill="url(#blackG2)"/>
+    <path d="M0,80 L90,80 L90,130 L0,130 Z" fill="rgba(255,255,255,.04)"/>
+    <g transform="translate(35,48) scale(0.9)">
+      <ellipse cx="10" cy="14" rx="5" ry="7" fill="#c8a415"/>
+      <path d="M10,10 Q-2,6 -8,14 Q-2,16 10,14" fill="#c8a415"/>
+      <path d="M10,10 Q22,6 28,14 Q22,16 10,14" fill="#c8a415"/>
+      <circle cx="10" cy="6" r="4" fill="#c8a415"/>
+      <path d="M10,8 L7,11 L10,10 Z" fill="#8b6914"/>
+      <path d="M7,20 L10,26 L13,20" fill="#c8a415"/>
+      <rect x="5" y="24" width="10" height="3" rx="1" fill="#c8a415"/>
+      <ellipse cx="8" cy="5" rx="1.5" ry="1" fill="rgba(255,255,200,.4)"/>
+    </g>
+  </g>
+  <rect x="82" y="0" width="8" height="130" fill="url(#blackG2)" rx="2"/>
+  <rect x="86" y="0" width="3" height="130" fill="rgba(255,255,255,.15)" rx="1"/>
+</svg>
+</div>
+<canvas class="flag-flame flame-canvas" id="flameL"></canvas>
+<canvas class="flag-flame-r flame-canvas" id="flameR"></canvas>
+<div class="toast" id="toast"><span>تم الحفظ ⚡</span></div>
 <div class="settings-overlay" id="settingsOverlay" onclick="if(event.target===this)closeSettings()">
 <div class="settings-modal">
   <button class="settings-close" onclick="closeSettings()">✕</button>
@@ -298,11 +491,79 @@ img{max-width:100%;display:block}
   </div>
   <p class="settings-msg" id="settingsMsg"></p>
 </div>
-</div><div class="app"><div class="hero-shell"><div class="hero-main-img"><img src="https://i.ibb.co/nN5RV7F2/5895471328712658541-119.jpg"></div><div class="hero-copy"><h1>LOTFY</h1><p class="tag">سجّل · تابع · تطوّر · انتصر</p><p class="ml">انزل تحت يبليصه انت وهو 🔥</p><p class="ms">تعبك انهارده هتشوف نتيجته بكره يعجل انت وهو</p><div class="soc-row"><a href="https://wa.me/201014354897" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://www.tiktok.com/@lotfy._7" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.82.11V9.4a6.33 6.33 0 00-.82-.05A6.34 6.34 0 003.15 15.7 6.34 6.34 0 009.49 22a6.34 6.34 0 006.34-6.34V9.01a8.24 8.24 0 004.76 1.5v-3.4a4.85 4.85 0 01-1-.42z"/></svg></a><a href="https://www.instagram.com/lotfy._1" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div></div><div class="lotfy-quote-box">
+</div><div class="app"><div class="hero-shell" style="position:relative">
+<!-- دمبلز ديكور -->
+<svg class="dumbbell-deco" style="position:absolute;top:-18px;left:-18px;width:54px;height:54px;opacity:.85;filter:drop-shadow(0 0 8px #ff4400)" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="24" width="44" height="6" rx="3" fill="#c0392b"/>
+  <rect x="1" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="1" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="43" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="43" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="12" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+  <rect x="36" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+</svg>
+<svg class="dumbbell-deco" style="position:absolute;top:-18px;right:-18px;width:54px;height:54px;opacity:.85;filter:drop-shadow(0 0 8px #ff4400);transform:scaleX(-1)" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="24" width="44" height="6" rx="3" fill="#c0392b"/>
+  <rect x="1" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="1" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="43" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="43" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="12" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+  <rect x="36" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+</svg>
+<svg class="dumbbell-deco" style="position:absolute;bottom:-18px;left:-18px;width:54px;height:54px;opacity:.85;filter:drop-shadow(0 0 8px #ff4400);transform:rotate(45deg)" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="24" width="44" height="6" rx="3" fill="#c0392b"/>
+  <rect x="1" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="1" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="43" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="43" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="12" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+  <rect x="36" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+</svg>
+<svg class="dumbbell-deco" style="position:absolute;bottom:-18px;right:-18px;width:54px;height:54px;opacity:.85;filter:drop-shadow(0 0 8px #ff4400);transform:rotate(-45deg) scaleX(-1)" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="24" width="44" height="6" rx="3" fill="#c0392b"/>
+  <rect x="1" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="1" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="43" y="18" width="10" height="18" rx="4" fill="#e74c3c"/><rect x="43" y="22" width="10" height="10" rx="3" fill="#ff6b35"/>
+  <rect x="12" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+  <rect x="36" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+</svg>
+<!-- دمبلز على الجوانب -->
+<svg class="dumbbell-deco" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%) rotate(90deg);width:48px;height:48px;opacity:.7;filter:drop-shadow(0 0 6px #ff4400)" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="24" width="44" height="6" rx="3" fill="#c0392b"/>
+  <rect x="1" y="18" width="10" height="18" rx="4" fill="#e74c3c"/>
+  <rect x="43" y="18" width="10" height="18" rx="4" fill="#e74c3c"/>
+  <rect x="12" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+  <rect x="36" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+</svg>
+<svg class="dumbbell-deco" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%) rotate(90deg);width:48px;height:48px;opacity:.7;filter:drop-shadow(0 0 6px #ff4400)" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="24" width="44" height="6" rx="3" fill="#c0392b"/>
+  <rect x="1" y="18" width="10" height="18" rx="4" fill="#e74c3c"/>
+  <rect x="43" y="18" width="10" height="18" rx="4" fill="#e74c3c"/>
+  <rect x="12" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+  <rect x="36" y="21" width="6" height="12" rx="2" fill="#c0392b"/>
+</svg>
+<div class="hero-main-img"><img src="https://i.ibb.co/nN5RV7F2/5895471328712658541-119.jpg"></div><div class="hero-copy"><h1>LOTFY</h1><p class="ml">انزل تحت يبليصه انت وهو 🔥</p><p class="ms">تعبك انهارده هتشوف نتيجته بكره يعجل انت وهو</p><div class="soc-row"><a href="https://wa.me/201014354897" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://www.tiktok.com/@lotfy._7" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.82.11V9.4a6.33 6.33 0 00-.82-.05A6.34 6.34 0 003.15 15.7 6.34 6.34 0 009.49 22a6.34 6.34 0 006.34-6.34V9.01a8.24 8.24 0 004.76 1.5v-3.4a4.85 4.85 0 01-1-.42z"/></svg></a><a href="https://www.instagram.com/lotfy._1" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div></div><div class="lotfy-quote-box">
 <p class="lotfy-quote-text">المنصه دي أنا عاملتها عشان البليصات تنزل تتمرن وتبطل كسل ومعمولة عشان تحسب تطورك هدفي إني أساعدك يملك من ليه يلا يعلق كمل تمرين سلام</p>
 <p class="lotfy-quote-sig">— Lotfy ELFahl 👑</p>
 </div>
-<div class="sec-divider"><span>📈 التطور</span></div><div class="pgrid"><div class="pc"><span class="v" id="s1">0</span><span class="l">أيام تدريب</span></div><div class="pc"><span class="v" id="s2">0</span><span class="l">تمرين</span></div><div class="pc"><span class="v" id="s3">0</span><span class="l">حمل كلي (كجم)</span></div><div class="pc"><span class="v" id="s4">--</span><span class="l">الوزن</span></div></div><div class="panel"><div class="sec-divider"><span>⚖️ تتبع الوزن</span></div><div class="wi"><div class="wf"><span class="ic">⚖️</span><input type="number" id="wI" step="0.1" placeholder="وزنك بالكيلو"></div><div class="wf"><span class="ic">📅</span><input type="text" id="wD" placeholder="يوم/شهر/سنة"></div><button class="sp-b on" onclick="logW()">⚡ سجّل</button></div><div class="chrt"><canvas id="chart"></canvas></div></div><div class="panel"><div class="sec-divider"><span>🖼️ قبل وبعد</span></div><div class="ba-grid"><label class="upload-tile"><input type="file" accept="image/*" style="display:none"><div><div class="upload-badge">📤</div><strong>أضف صورة قبل</strong><span>صورة البداية</span></div></label><label class="upload-tile"><input type="file" accept="image/*" style="display:none"><div><div class="upload-badge">⚡</div><strong>أضف صورة بعد</strong><span>النتيجة</span></div></label></div></div><div class="panel"><div class="sec-divider"><span>🍗 حاسبة السعرات</span></div><p class="sec-sub">اكتب اسم الأكلة بالعربي</p><input class="cal-inp" id="ci" placeholder="اكتب اسم الأكلة (رز، فراخ، بيض، لبن...)" oninput="cS()"><div class="fcats"><span class="fc on" onclick="cF('all',this)">🔍 الكل</span><span class="fc" onclick="cF('بروتين',this)">🍗 بروتين</span><span class="fc" onclick="cF('كارب',this)">🍚 كارب</span><span class="fc" onclick="cF('خضار',this)">🥦 خضار</span><span class="fc" onclick="cF('فاكهة',this)">🍌 فاكهة</span><span class="fc" onclick="cF('ألبان',this)">🥛 ألبان</span><span class="fc" onclick="cF('دهون',this)">🥑 دهون</span><span class="fc" onclick="cF('مكملات',this)">💊 مكملات</span><span class="fc" onclick="cF('مشروبات',this)">🥤 مشروبات</span><span class="fc" onclick="cF('وجبات',this)">🍽️ وجبات</span><span class="fc" onclick="cF('حلويات',this)">🍫 حلويات</span></div><div class="fres" id="fr"></div></div><div class="panel"><div class="sec-divider"><span>🥗 أنظمة غذائية</span></div>
+<div class="sec-divider"><span>📈 التطور</span></div><div class="pgrid"><div class="pc"><span class="v" id="s1">0</span><span class="l">أيام تدريب</span></div><div class="pc"><span class="v" id="s4">--</span><span class="l">الوزن (كجم)</span></div></div>
+<div class="panel" style="margin-top:14px">
+<div class="sec-divider"><span>📊 جدول التطور</span></div>
+<p class="sec-sub">التمارين اللي بتتطور فيها</p>
+<div id="progressTableWrap">
+<table class="et" id="progressTable" style="width:100%">
+<thead><tr><th>التمرين</th><th>آخر وزن</th><th>أعلى وزن</th><th>التطور</th></tr></thead>
+<tbody id="progressTbody"><tr><td colspan="4" style="text-align:center;opacity:.5;padding:16px">مفيش بيانات لسه يا فحل 💪</td></tr></tbody>
+</table>
+</div>
+</div><div class="panel"><div class="sec-divider"><span>⚖️ تتبع الوزن</span></div><div class="wi"><div class="wf"><span class="ic">⚖️</span><input type="number" id="wI" step="0.1" placeholder="وزنك بالكيلو"></div><div class="wf"><span class="ic">📅</span><input type="text" id="wD" placeholder="يوم/شهر/سنة"></div><button class="sp-b on" onclick="logW()">⚡ سجّل</button></div><div class="chrt"><canvas id="chart"></canvas></div></div><div class="panel"><div class="sec-divider"><span>🖼️ قبل وبعد</span></div><div class="ba-grid">
+<label class="upload-tile" id="beforeTile" onclick="triggerUpload('beforeInput')">
+  <input type="file" accept="image/*" id="beforeInput" style="display:none" onchange="handlePhoto(this,'before')">
+  <div id="beforeContent"><div class="upload-badge">📤</div><strong>أضف صورة قبل</strong><span>صورة البداية</span></div>
+</label>
+<label class="upload-tile" id="afterTile" onclick="triggerUpload('afterInput')">
+  <input type="file" accept="image/*" id="afterInput" style="display:none" onchange="handlePhoto(this,'after')">
+  <div id="afterContent"><div class="upload-badge">⚡</div><strong>أضف صورة بعد</strong><span>النتيجة</span></div>
+</label>
+</div>
+<div style="text-align:center;margin-top:10px;display:flex;gap:10px;justify-content:center">
+  <button class="ab" id="clearBeforeBtn" onclick="clearPhoto('before')" style="display:none;font-size:.75rem;padding:6px 14px">🗑️ شيل قبل</button>
+  <button class="ab" id="clearAfterBtn" onclick="clearPhoto('after')" style="display:none;font-size:.75rem;padding:6px 14px">🗑️ شيل بعد</button>
+</div></div><div class="panel"><div class="sec-divider"><span>🍗 حاسبة السعرات</span></div><p class="sec-sub">اكتب اسم الأكلة بالعربي</p><input class="cal-inp" id="ci" placeholder="اكتب اسم الأكلة (رز، فراخ، بيض، لبن...)" oninput="cS()"><div class="fcats"><span class="fc on" onclick="cF('all',this)">🔍 الكل</span><span class="fc" onclick="cF('بروتين',this)">🍗 بروتين</span><span class="fc" onclick="cF('كارب',this)">🍚 كارب</span><span class="fc" onclick="cF('خضار',this)">🥦 خضار</span><span class="fc" onclick="cF('فاكهة',this)">🍌 فاكهة</span><span class="fc" onclick="cF('ألبان',this)">🥛 ألبان</span><span class="fc" onclick="cF('دهون',this)">🥑 دهون</span><span class="fc" onclick="cF('مكملات',this)">💊 مكملات</span><span class="fc" onclick="cF('مشروبات',this)">🥤 مشروبات</span><span class="fc" onclick="cF('وجبات',this)">🍽️ وجبات</span><span class="fc" onclick="cF('حلويات',this)">🍫 حلويات</span></div><div class="fres" id="fr"></div></div><div class="panel"><div class="sec-divider"><span>🥗 أنظمة غذائية</span></div>
 <div class="diet-tabs"><button class="diet-tab on" onclick="showDiet('bulk',this)">🔥 تضخيم</button><button class="diet-tab" onclick="showDiet('cut',this)">✂️ تنشيف</button><button class="diet-tab" onclick="showDiet('maint',this)">⚖️ ثبات</button></div>
 
 <!-- تضخيم -->
@@ -325,7 +586,9 @@ img{max-width:100%;display:block}
   <div class="meals-list" id="meals_maint"></div>
   <button class="add-meal-btn" onclick="addMeal('maint')">+ إضافة وجبة</button>
 </div>
-</div><div class="panel"><div class="sec-divider"><span>🏋️ التمارين</span></div><p class="sec-sub">اختار نظامك وسجّل تمارينك</p><div class="sp-sel"><button class="sp-b on" id="b_ppl" onclick="sSp('ppl')">PPL</button><button class="sp-b" id="b_pro" onclick="sSp('pro')">برو اسبلت</button><button class="sp-b" id="b_arn" onclick="sSp('arn')">أرنولد اسبلت</button></div><div id="d_ppl" class="dg"><div class="dc on" data-d="push" onclick="sD('push')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>دفع (صدر+تراي)</span></div><div class="dc" data-d="pull" onclick="sD('pull')"><img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=300&q=70"><span>سحب (ضهر+باي)</span></div><div class="dc" data-d="legs" onclick="sD('legs')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>رجل</span></div></div><div id="d_pro" class="dg" style="display:none"><div class="dc" data-d="chest_tri" onclick="sD('chest_tri')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>صدر وتراي</span></div><div class="dc" data-d="back_bi" onclick="sD('back_bi')"><img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=300&q=70"><span>ضهر وباي</span></div><div class="dc" data-d="legs_p" onclick="sD('legs_p')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>رجل</span></div></div><div id="d_arn" class="dg" style="display:none"><div class="dc" data-d="ch_bk" onclick="sD('ch_bk')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>صدر وضهر</span></div><div class="dc" data-d="sh_ar" onclick="sD('sh_ar')"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&q=70"><span>كتف ودراع</span></div><div class="dc" data-d="lg_ab" onclick="sD('lg_ab')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>رجل وبطن</span></div></div><div class="ep on" id="p_push"></div><div class="ep" id="p_pull"></div><div class="ep" id="p_legs"></div><div class="ep" id="p_chest_tri"></div><div class="ep" id="p_back_bi"></div><div class="ep" id="p_legs_p"></div><div class="ep" id="p_ch_bk"></div><div class="ep" id="p_sh_ar"></div><div class="ep" id="p_lg_ab"></div></div><div class="panel"><div class="sec-divider"><span>📋 أنظمة تدريبية جاهزة</span></div><p class="sec-sub">اختار النظام اللي يناسبك واطبقه</p><div class="pt-tabs"><button class="pt-tab on" onclick="showPT('ppl2',this)">PPL</button><button class="pt-tab" onclick="showPT('brosplit',this)">برو اسبلت</button><button class="pt-tab" onclick="showPT('upperlower',this)">علوي / سفلي</button><button class="pt-tab" onclick="showPT('arnold',this)">أرنولد اسبلت</button></div><div class="pt-plan" id="pt_ppl2"><div class="pt-desc"><span class="pt-badge" style="background:oklch(45% .18 145)">3 أيام</span><p>نظام Push Pull Legs - الأكثر شيوعاً وفعالية لبناء العضلات بشكل متوازن</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">💪 Push (دفع)</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>صدر</span><span>تراي</span><span>كتف أمامي</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 200)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">🔄 Pull (سحب)</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>ضهر</span><span>باي</span><span>كتف خلفي</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم التالت</span><span class="pt-day-name">🦵 Legs (رجل)</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>كواد</span><span>هامسترينج</span><span>ساق</span><span>بطن</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div></div></div><div class="pt-plan" id="pt_brosplit" style="display:none"><div class="pt-desc"><span class="pt-badge" style="background:oklch(50% .18 260)">4 أيام</span><p>برو اسبلت - كل جزء في يوم لوحده لتركيز أعلى وحجم تمرين أكبر</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">💪 صدر وتراي</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>صدر</span><span>تراي</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 200)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">🔄 ضهر وباي</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>ضهر</span><span>باي</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 300)"><span class="pt-day-num">اليوم التالت</span><span class="pt-day-name">🏋️ دراع وكتف</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>باي</span><span>تراي</span><span>كتف</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم الرابع</span><span class="pt-day-name">🦵 رجل وبطن</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>كواد</span><span>هامسترينج</span><span>ساق</span><span>بطن</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div></div></div><div class="pt-plan" id="pt_upperlower" style="display:none"><div class="pt-desc"><span class="pt-badge" style="background:oklch(52% .18 180)">2 أيام</span><p>نظام علوي / سفلي - مثالي للمبتدئين أو اللي عندهم وقت قليل</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">⬆️ علوي (Upper)</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>صدر</span><span>ضهر</span><span>كتف</span><span>باي</span><span>تراي</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">⬇️ سفلي (Lower)</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>كواد</span><span>هامسترينج</span><span>ساق</span><span>بطن</span><span>أرداف</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div></div></div><div class="pt-plan" id="pt_arnold" style="display:none"><div class="pt-desc"><span class="pt-badge" style="background:oklch(48% .18 45)">3 أيام</span><p>أرنولد اسبلت - النظام اللي كان بيشتغل بيه أرنولد شوارزنيجر نفسه</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">💪 صدر وضهر</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>صدر</span><span>ضهر</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 300)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">🏋️ دراع وكتف</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>باي</span><span>تراي</span><span>كتف</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم التالت</span><span class="pt-day-name">🦵 رجل وبطن</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>كواد</span><span>هامسترينج</span><span>ساق</span><span>بطن</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div></div></div></div><footer class="footer"><h3>LOTFY</h3><p>اصنع أفضل نسخة من نفسك 💪</p><div class="fs"><a href="https://wa.me/201014354897" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://www.tiktok.com/@lotfy._7" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.82.11V9.4a6.33 6.33 0 00-.82-.05A6.34 6.34 0 003.15 15.7 6.34 6.34 0 009.49 22a6.34 6.34 0 006.34-6.34V9.01a8.24 8.24 0 004.76 1.5v-3.4a4.85 4.85 0 01-1-.42z"/></svg></a><a href="https://www.instagram.com/lotfy._1" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></footer></div></div>
+</div><div class="panel"><div class="sec-divider"><span>🏋️ التمارين</span></div><p class="sec-sub">اختار نظامك وسجّل تمارينك</p><div class="sp-sel"><button class="sp-b on" id="b_ppl" onclick="sSp('ppl')">نظام الفحل (لطفي)</button><button class="sp-b" id="b_ppl2" onclick="sSp('ppl2')">PPL</button><button class="sp-b" id="b_ul" onclick="sSp('ul')">علوي / سفلي</button><button class="sp-b" id="b_pro" onclick="sSp('pro')">برو اسبلت</button><button class="sp-b" id="b_arn" onclick="sSp('arn')">أرنولد اسبلت</button></div><div id="d_ppl" class="dg"><div class="dc on" data-d="push" onclick="sD('push')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>📍 اليوم الأول - Push (صدر+تراي)</span></div><div class="dc" data-d="pull" onclick="sD('pull')"><img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=300&q=70"><span>📍 اليوم التاني - Pull (ضهر+باي)</span></div><div class="dc" data-d="legs" onclick="sD('legs')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>📍 اليوم التالت - رجل وبطن</span></div><div class="dc" data-d="fahl_upper" onclick="sD('fahl_upper')"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&q=70"><span>📍 اليوم الرابع - علوي</span></div><div class="dc" data-d="fahl_lower" onclick="sD('fahl_lower')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>📍 اليوم الخامس - سفلي</span></div></div><div id="d_ppl2" class="dg" style="display:none"><div class="dc" data-d="ppl2_push" onclick="sD('ppl2_push')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>📍 اليوم الأول - Push</span></div><div class="dc" data-d="ppl2_pull" onclick="sD('ppl2_pull')"><img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=300&q=70"><span>📍 اليوم التاني - Pull</span></div><div class="dc" data-d="ppl2_legs" onclick="sD('ppl2_legs')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>📍 اليوم التالت - رجل وبطن</span></div></div>
+<div id="d_ul" class="dg" style="display:none"><div class="dc" data-d="ul_upper" onclick="sD('ul_upper')"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&q=70"><span>📍 اليوم الأول - علوي</span></div><div class="dc" data-d="ul_lower" onclick="sD('ul_lower')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>📍 اليوم التاني - سفلي</span></div></div>
+<div id="d_pro" class="dg" style="display:none"><div class="dc" data-d="chest_tri" onclick="sD('chest_tri')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>📍 اليوم الأول - صدر وتراي</span></div><div class="dc" data-d="back_bi" onclick="sD('back_bi')"><img src="https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=300&q=70"><span>📍 اليوم التاني - ضهر وباي</span></div><div class="dc" data-d="legs_p" onclick="sD('legs_p')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>📍 اليوم التالت - رجل</span></div><div class="dc" data-d="sh_ar_p" onclick="sD('sh_ar_p')"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&q=70"><span>📍 اليوم الرابع - كتف ودراع</span></div></div><div id="d_arn" class="dg" style="display:none"><div class="dc" data-d="ch_bk" onclick="sD('ch_bk')"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=70"><span>صدر وضهر</span></div><div class="dc" data-d="sh_ar" onclick="sD('sh_ar')"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&q=70"><span>كتف ودراع</span></div><div class="dc" data-d="lg_ab" onclick="sD('lg_ab')"><img src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=300&q=70"><span>رجل وبطن</span></div></div><div class="ep on" id="p_push"></div><div class="ep" id="p_pull"></div><div class="ep" id="p_legs"></div><div class="ep" id="p_fahl_upper"></div><div class="ep" id="p_fahl_lower"></div><div class="ep" id="p_sh_ar_p"></div><div class="ep" id="p_ppl2_push"></div><div class="ep" id="p_ppl2_pull"></div><div class="ep" id="p_ppl2_legs"></div><div class="ep" id="p_ul_upper"></div><div class="ep" id="p_ul_lower"></div><div class="ep" id="p_chest_tri"></div><div class="ep" id="p_back_bi"></div><div class="ep" id="p_legs_p"></div><div class="ep" id="p_ch_bk"></div><div class="ep" id="p_sh_ar"></div><div class="ep" id="p_lg_ab"></div></div><div class="panel"><div class="sec-divider"><span>📋 أنظمة تدريبية جاهزة</span></div><p class="sec-sub">اختار النظام اللي يناسبك واطبقه</p><div class="pt-tabs"><button class="pt-tab on" onclick="showPT('ppl2',this)">PPL</button><button class="pt-tab" onclick="showPT('brosplit',this)">برو اسبلت</button><button class="pt-tab" onclick="showPT('upperlower',this)">علوي / سفلي</button><button class="pt-tab" onclick="showPT('arnold',this)">أرنولد اسبلت</button></div><div class="pt-plan" id="pt_ppl2"><div class="pt-desc"><span class="pt-badge" style="background:oklch(45% .18 145)">3 أيام</span><p>نظام Push Pull Legs - الأكثر شيوعاً وفعالية لبناء العضلات بشكل متوازن</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">💪 Push (دفع)</span></div><div class="pt-day-body" id="pt_ppl2_push"></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 200)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">🔄 Pull (سحب)</span></div><div class="pt-day-body" id="pt_ppl2_pull"></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم التالت</span><span class="pt-day-name">🦵 رجل وبطن</span></div><div class="pt-day-body" id="pt_ppl2_legs"></div></div></div></div><div class="pt-plan" id="pt_brosplit" style="display:none"><div class="pt-desc"><span class="pt-badge" style="background:oklch(50% .18 260)">4 أيام</span><p>برو اسبلت - كل جزء في يوم لوحده لتركيز أعلى وحجم تمرين أكبر</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">💪 صدر وتراي</span></div><div class="pt-day-body" id="pt_bro_chest"></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 200)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">🔄 ضهر وباي</span></div><div class="pt-day-body" id="pt_bro_back"></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 300)"><span class="pt-day-num">اليوم التالت</span><span class="pt-day-name">🏋️ كتف ودراع</span></div><div class="pt-day-body" id="pt_bro_sh"></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم الرابع</span><span class="pt-day-name">🦵 رجل وبطن</span></div><div class="pt-day-body" id="pt_bro_legs"></div></div></div></div><div class="pt-plan" id="pt_upperlower" style="display:none"><div class="pt-desc"><span class="pt-badge" style="background:oklch(52% .18 180)">2 أيام</span><p>نظام علوي / سفلي - مثالي للمبتدئين أو اللي عندهم وقت قليل</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">⬆️ علوي (Upper)</span></div><div class="pt-day-body" id="pt_ul_upper"></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">⬇️ سفلي (Lower)</span></div><div class="pt-day-body" id="pt_ul_lower"></div></div></div><div class="pt-plan" id="pt_arnold" style="display:none"><div class="pt-desc"><span class="pt-badge" style="background:oklch(48% .18 45)">3 أيام</span><p>أرنولد اسبلت - النظام اللي كان بيشتغل بيه أرنولد شوارزنيجر نفسه</p></div><div class="pt-days"><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 145)"><span class="pt-day-num">اليوم الأول</span><span class="pt-day-name">💪 صدر وضهر</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>صدر</span><span>ضهر</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 300)"><span class="pt-day-num">اليوم التاني</span><span class="pt-day-name">🏋️ دراع وكتف</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>باي</span><span>تراي</span><span>كتف</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div><div class="pt-day"><div class="pt-day-header" style="border-color:oklch(55% .18 25)"><span class="pt-day-num">اليوم التالت</span><span class="pt-day-name">🦵 رجل وبطن</span></div><div class="pt-day-body"><div class="pt-muscle-tags"><span>كواد</span><span>هامسترينج</span><span>ساق</span><span>بطن</span></div><p class="pt-note">التمارين هتضيفها إنت قريب 💪</p></div></div></div></div></div><footer class="footer"><h3>LOTFY</h3><p>اصنع أفضل نسخة من نفسك 💪</p><div class="fs"><a href="https://wa.me/201014354897" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://www.tiktok.com/@lotfy._7" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .56.04.82.11V9.4a6.33 6.33 0 00-.82-.05A6.34 6.34 0 003.15 15.7 6.34 6.34 0 009.49 22a6.34 6.34 0 006.34-6.34V9.01a8.24 8.24 0 004.76 1.5v-3.4a4.85 4.85 0 01-1-.42z"/></svg></a><a href="https://www.instagram.com/lotfy._1" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></footer></div></div>
 <div class="chatbot-wrap"><div class="chatbot-panel" id="chatbotPanel"><div class="chatbot-head"><div><strong>القدوه لطفي</strong><br><span>بيكلمك مصري، جوه وبرا الجيم</span></div><button class="lout" onclick="toggleChatbot()">✕</button></div><div class="chatbot-body" id="chatbotBody"><div class="chat-msg bot">أيوه يا فحل، أنا <strong>القدوه لطفي</strong>. اسألني في التمرين، الأكل، الشغل، الدراسة، العلاقات، أو حتى لو زهقان وعايز حد يفوقك يا عجل.</div></div><div class="chatbot-quick"><button class="quick-btn" onclick="sendQuick('عايز تحفيز')">تحفيز</button><button class="quick-btn" onclick="sendQuick('تمرين صدر')">صدر</button><button class="quick-btn" onclick="sendQuick('أكل تنشيف')">تنشيف</button><button class="quick-btn" onclick="sendQuick('مذاكرة')">مذاكرة</button><button class="quick-btn" onclick="sendQuick('زعلان')">زعلان</button><button class="quick-btn" onclick="sendQuick('عندي مقابلة شغل')">مقابلة شغل</button></div><div class="chatbot-inputbar"><input class="chatbot-input" id="chatbotInput" placeholder="اكتب سؤالك يا فحل" onkeydown="if(event.key==='Enter')sendChatbotMessage()"><button class="chatbot-send" onclick="sendChatbotMessage()">إرسال</button></div></div><button class="chatbot-toggle" onclick="toggleChatbot()">💬</button></div>
 <script>
 (function(){const sL=document.getElementById('smokeLayer'),spL=document.getElementById('sparkLayer');for(let i=0;i<6;i++){const s=document.createElement('div');s.className='smoke';const sz=100+Math.random()*140;s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;bottom:-${sz}px;animation-duration:${14+Math.random()*16}s;animation-delay:${Math.random()*12}s`;sL.appendChild(s)}for(let i=0;i<8;i++){const sp=document.createElement('div');sp.className='spark';sp.style.cssText=`height:${20+Math.random()*30}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${2+Math.random()*3}s;animation-delay:${Math.random()*7}s`;spL.appendChild(sp)}for(let i=0;i<6;i++){const d=document.createElement('div');d.className='spark-dot';d.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${2.5+Math.random()*3}s;animation-delay:${Math.random()*9}s`;spL.appendChild(d)}})();
@@ -337,7 +600,7 @@ function sE(id,m){document.getElementById(id).textContent=m;setTimeout(()=>docum
 function doLogout(){auth.signOut();U='';userData=null;document.getElementById('aw').classList.remove('active');document.getElementById('lo').style.display='flex';document.getElementById('lo').classList.remove('hidden')}
 function ent(name){document.getElementById('wo').classList.add('hidden');document.getElementById('sp').style.display='none';document.getElementById('lo').classList.add('hidden');document.getElementById('lo').style.display='none';document.getElementById('aw').classList.add('active');document.getElementById('tn').textContent=name;rAll()}
 auth.onAuthStateChanged(async user=>{if(!user)return;U=user.email;const doc=await db.collection('users').doc(user.uid).get();if(doc.exists&&doc.data().gym){userData=doc.data().gym;allD.forEach(k=>{if(!userData.days[k])userData.days[k]=[]});}else userData=emp();ent(user.displayName||user.email.split('@')[0])});
-const allD=['push','pull','legs','chest_tri','back_bi','legs_p','ch_bk','sh_ar','lg_ab'];function emp(){const d={weights:[]};d.days={};allD.forEach(k=>d.days[k]=[]);return d}function ud(){return userData||emp()}function sUD(u){userData=u;if(auth.currentUser)db.collection('users').doc(auth.currentUser.uid).set({gym:u},{merge:true});document.getElementById('toast').classList.add('show');setTimeout(()=>document.getElementById('toast').classList.remove('show'),1200)}
+const allD=['push','pull','legs','fahl_upper','fahl_lower','ppl2_push','ppl2_pull','ppl2_legs','ul_upper','ul_lower','chest_tri','back_bi','legs_p','sh_ar_p','ch_bk','sh_ar','lg_ab'];function emp(){const d={weights:[]};d.days={};allD.forEach(k=>d.days[k]=[]);return d}function ud(){return userData||emp()}function sUD(u){userData=u;if(auth.currentUser)db.collection('users').doc(auth.currentUser.uid).set({gym:u},{merge:true});document.getElementById('toast').classList.add('show');setTimeout(()=>document.getElementById('toast').classList.remove('show'),1200)}
 function logW(){const w=parseFloat(document.getElementById('wI').value),raw=document.getElementById('wD').value.trim();let dt;if(!raw)dt=new Date().toISOString().split('T')[0];else{const p=raw.split(/[\/\-.]/);dt=p.length===3?`${p[2].length===2?'20'+p[2]:p[2]}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`:new Date().toISOString().split('T')[0]}if(!w||w<=0)return;const u=ud();u.weights.push({weight:w,date:dt});u.weights.sort((a,b)=>new Date(a.date)-new Date(b.date));sUD(u);document.getElementById('wI').value='';document.getElementById('wD').value='';drC();upS()}
 function drC(){const cv=document.getElementById('chart'),ctx=cv.getContext('2d'),r=cv.parentElement.getBoundingClientRect();cv.width=r.width-36;cv.height=r.height-36;ctx.clearRect(0,0,cv.width,cv.height);const w=ud().weights||[];if(w.length<2){ctx.fillStyle='oklch(78% .02 200)';ctx.font='11px Cairo';ctx.textAlign='center';ctx.fillText('سجّل وزنك مرتين لعرض الرسم',cv.width/2,cv.height/2);return}const p={t:14,r:14,b:22,l:34},cw=cv.width-p.l-p.r,ch=cv.height-p.t-p.b,vs=w.map(e=>e.weight),mn=Math.min(...vs)-1,mx=Math.max(...vs)+1;const g=ctx.createLinearGradient(0,p.t,0,p.t+ch);g.addColorStop(0,'rgba(38,255,145,0.2)');g.addColorStop(1,'rgba(90,124,255,0)');ctx.beginPath();w.forEach((e,i)=>{const x=p.l+(cw/(w.length-1))*i,y=p.t+ch-((e.weight-mn)/(mx-mn))*ch;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)});ctx.lineTo(p.l+cw,p.t+ch);ctx.lineTo(p.l,p.t+ch);ctx.closePath();ctx.fillStyle=g;ctx.fill();ctx.beginPath();ctx.strokeStyle='rgba(38,255,145,1)';ctx.lineWidth=2.5;ctx.lineJoin='round';ctx.lineCap='round';w.forEach((e,i)=>{const x=p.l+(cw/(w.length-1))*i,y=p.t+ch-((e.weight-mn)/(mx-mn))*ch;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)});ctx.stroke();w.forEach((e,i)=>{const x=p.l+(cw/(w.length-1))*i,y=p.t+ch-((e.weight-mn)/(mx-mn))*ch;ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fillStyle=i%2===0?'rgba(38,255,145,1)':'rgba(90,124,255,1)';ctx.fill()})}
 const fdb=[
@@ -463,10 +726,71 @@ function cF(cat,el){document.querySelectorAll('.fc').forEach(b=>b.classList.remo
 function rF(items){const el=document.getElementById('fr');if(!items.length){el.innerHTML='<p class="nf">❌ مش لاقي الأكلة دي</p>';return}el.innerHTML=items.map(f=>`<div class="fi"><div><div class="fi-n">${f.n}</div><div class="fi-s">📏 ${f.s}</div></div><div class="fi-m"><div class="fm c"><span class="n">${f.cal}</span><span class="u">سعرة</span></div><div class="fm p"><span class="n">${f.pro}g</span><span class="u">بروتين</span></div><div class="fm k"><span class="n">${f.carb}g</span><span class="u">كارب</span></div><div class="fm f"><span class="n">${f.fat}g</span><span class="u">دهون</span></div></div></div>`).join('')}
 function rP(day){const pan=document.getElementById(`p_${day}`);if(!pan)return;const exs=ud().days[day]||[];let h=`<div class="etw"><table class="et"><thead><tr><th>التمرين</th><th>الوزن</th><th>مجموعات</th><th>العدات</th><th></th></tr></thead><tbody>`;exs.forEach((e,i)=>{h+=`<tr><td><input class="nm-input" type="text" value="${e.name}" onchange="uE('${day}',${i},'name',this.value)" placeholder="اسم التمرين"></td><td><input type="number" value="${e.weight}" onchange="uE('${day}',${i},'weight',this.value)" min="0" step="0.5"></td><td><input type="number" value="${e.sets}" onchange="uE('${day}',${i},'sets',this.value)" min="0"></td><td><input type="number" value="${e.reps}" onchange="uE('${day}',${i},'reps',this.value)" min="0"></td><td><button class="rb" onclick="dE('${day}',${i})">✕</button></td></tr>`});h+=`</tbody></table></div><button class="ab" onclick="aE('${day}')">+ إضافة تمرين</button>`;pan.innerHTML=h}
 function aE(d){const u=ud();if(!u.days[d])u.days[d]=[];u.days[d].push({name:'',weight:0,sets:3,reps:10});sUD(u);rP(d);upS()}
-function uE(d,i,f,v){const u=ud();u.days[d][i][f]=f==='name'?v:(parseFloat(v)||0);sUD(u);upS()}
+function uE(d,i,f,v){
+  const u=ud();
+  const oldEx=u.days[d][i];
+  const oldW=oldEx.weight||0;
+  const oldR=oldEx.reps||0;
+  u.days[d][i][f]=f==='name'?v:(parseFloat(v)||0);
+  // لو التمرين عنده اسم وعدّل وزن أو عدات
+  if(u.days[d][i].name){
+    const nm=u.days[d][i].name.trim().toLowerCase();
+    const hist=u.exerciseHistory||{};
+    const newW=u.days[d][i].weight||0;
+    const newR=u.days[d][i].reps||0;
+    const improved=(f==='weight'&&newW>oldW&&oldW>0)||(f==='reps'&&newR>oldR&&oldR>0);
+    if(improved){
+      // بعت رسالة تطور
+      const diffW=f==='weight'?` +${(newW-oldW)} كجم`:'';
+      const diffR=f==='reps'?` +${(newR-oldR)} عدات`:'';
+      showProgressMsg(`🔥 عاش يا فحل! انت بتتطور في ${u.days[d][i].name}${diffW}${diffR} 💪`);
+      // حفظ في التاريخ
+      if(!hist[nm]||newW>=hist[nm].weight){hist[nm]={name:u.days[d][i].name,weight:newW,reps:newR}}
+      u.exerciseHistory=hist;
+    }
+  }
+  sUD(u);upS();
+}
+function showProgressMsg(msg){
+  let el=document.getElementById('progressMsg');
+  if(!el){el=document.createElement('div');el.id='progressMsg';el.style.cssText='position:fixed;top:80px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#e53935,#b71c1c);color:#fff;padding:14px 24px;border-radius:16px;font-weight:900;font-size:.95rem;z-index:9999;box-shadow:0 8px 32px rgba(229,57,53,.5);text-align:center;max-width:320px;animation:slideIn .3s ease';document.body.appendChild(el)}
+  el.textContent=msg;el.style.display='block';
+  clearTimeout(el._t);el._t=setTimeout(()=>el.style.display='none',3000);
+}
 function dE(d,i){const u=ud();u.days[d].splice(i,1);sUD(u);rP(d);upS()}
-function upS(){const d=ud().days||{};let ex=0,vol=0,ses=0;Object.values(d).forEach(a=>{if(a&&a.length)ses++;if(a)a.forEach(e=>{if(e.name)ex++;vol+=(e.weight||0)*(e.sets||0)*(e.reps||0)})});document.getElementById('s1').textContent=ses;document.getElementById('s2').textContent=ex;document.getElementById('s3').textContent=vol.toLocaleString();const wts=ud().weights||[];document.getElementById('s4').textContent=wts.length?wts[wts.length-1].weight:'--'}
-function sSp(s){['ppl','pro','arn'].forEach(x=>{document.getElementById('b_'+x).classList.toggle('on',x===s);document.getElementById('d_'+x).style.display=x===s?'grid':'none'});document.querySelectorAll('.ep').forEach(p=>p.classList.remove('on'));if(s==='ppl')sD('push');else if(s==='pro')sD('chest_tri');else sD('ch_bk')}
+function upS(){const d=ud().days||{};let ses=0;Object.values(d).forEach(a=>{if(a&&a.length)ses++});document.getElementById('s1').textContent=ses;const wts=ud().weights||[];document.getElementById('s4').textContent=wts.length?wts[wts.length-1].weight:'--';buildProgressTable()}
+function buildProgressTable(){
+  const days=ud().days||{};
+  const hist=ud().exerciseHistory||{};
+  const latest={};
+  // اجمع كل التمارين الحالية
+  Object.values(days).forEach(arr=>{
+    if(!arr)return;
+    arr.forEach(e=>{
+      if(!e.name||!e.weight)return;
+      const k=e.name.trim().toLowerCase();
+      if(!latest[k])latest[k]={name:e.name,weight:e.weight,sets:e.sets,reps:e.reps};
+      else if(e.weight>latest[k].weight)latest[k].weight=e.weight;
+    });
+  });
+  const tbody=document.getElementById('progressTbody');
+  if(!tbody)return;
+  const keys=Object.keys(latest);
+  if(!keys.length){tbody.innerHTML='<tr><td colspan="4" style="text-align:center;opacity:.5;padding:16px">مفيش بيانات لسه يا فحل 💪</td></tr>';return}
+  let html='';
+  keys.forEach(k=>{
+    const cur=latest[k];
+    const prev=hist[k];
+    let prog='—';let progColor='var(--muted)';
+    if(prev&&prev.weight<cur.weight){prog='⬆️ +'.concat((cur.weight-prev.weight),'كجم');progColor='#4caf50'}
+    else if(prev&&prev.weight===cur.weight&&prev.reps<cur.reps){prog='⬆️ +عدات';progColor='#4caf50'}
+    else if(prev){prog='= ثابت';progColor='var(--muted)'}
+    const maxW=hist[k]?Math.max(hist[k].weight||0,cur.weight):cur.weight;
+    html+=`<tr><td style="font-weight:700">${cur.name}</td><td>${cur.weight} كجم</td><td>${maxW} كجم</td><td style="color:${progColor};font-weight:700">${prog}</td></tr>`;
+  });
+  tbody.innerHTML=html;
+}
+function sSp(s){['ppl','ppl2','ul','pro','arn'].forEach(x=>{const b=document.getElementById('b_'+x);const d=document.getElementById('d_'+x);if(b)b.classList.toggle('on',x===s);if(d)d.style.display=x===s?'grid':'none'});document.querySelectorAll('.ep').forEach(p=>p.classList.remove('on'));if(s==='ppl')sD('push');else if(s==='ppl2')sD('ppl2_push');else if(s==='ul')sD('ul_upper');else if(s==='pro')sD('chest_tri');else sD('ch_bk')}
 function sD(day){document.querySelectorAll('.dc').forEach(c=>c.classList.remove('on'));document.querySelectorAll('.ep').forEach(p=>p.classList.remove('on'));const card=document.querySelector(`.dc[data-d="${day}"]`);if(card)card.classList.add('on');const pan=document.getElementById(`p_${day}`);if(pan)pan.classList.add('on')}
 function rAll(){allD.forEach(d=>rP(d));drC();upS();rF(fdb)}window.addEventListener('resize',drC);
 // دمبلز سلو موشن على شاشة اللوجين
@@ -570,6 +894,248 @@ function saveName(){const n=document.getElementById('newName').value.trim();if(!
 function savePass(){const p1=document.getElementById('newPass1').value,p2=document.getElementById('newPass2').value;if(!p1||p1.length<6){showSettingsMsg('⚠️ كلمة السر لازم 6 حروف على الأقل','#ff9800');return}if(p1!==p2){showSettingsMsg('⚠️ كلمتي السر مش متطابقتين','#ff9800');return}if(!auth.currentUser){showSettingsMsg('⚠️ مش متسجل دخول','#ff9800');return}auth.currentUser.updatePassword(p1).then(()=>{document.getElementById('newPass1').value='';document.getElementById('newPass2').value='';showSettingsMsg('✅ اتغيرت كلمة السر!','#4caf50')}).catch(e=>showSettingsMsg('❌ '+e.message,'#f44336'))}
 function showSettingsMsg(msg,color){const el=document.getElementById('settingsMsg');el.textContent=msg;el.style.color=color;setTimeout(()=>el.textContent='',4000)}
 (function(){const t=localStorage.getItem('theme');if(t==='day'){document.body.classList.add('day-mode');const tog=document.getElementById('themeToggle');if(tog)tog.checked=true;const lbl=document.getElementById('themeLabel');if(lbl)lbl.textContent='☀️ الوضع النهاري'}})();
+
+// 🔥 لهب علم مصر في وضع النهار
+function initFlames(){
+  ['flameL','flameR'].forEach(id=>{
+    const canvas=document.getElementById(id);
+    if(!canvas)return;
+    const ctx=canvas.getContext('2d');
+    canvas.width=60;canvas.height=120;
+    const particles=Array.from({length:18},()=>newFlameP());
+    function newFlameP(){return{x:20+Math.random()*20,y:110+Math.random()*10,vx:(Math.random()-.5)*1.2,vy:-(1.5+Math.random()*2),life:1,size:4+Math.random()*8}}
+    function frame(){
+      ctx.clearRect(0,0,60,120);
+      particles.forEach((p,i)=>{
+        p.x+=p.vx;p.y+=p.vy;p.life-=.025;p.size*=.97;
+        if(p.life<=0||p.y<0)particles[i]=newFlameP();
+        const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.size);
+        g.addColorStop(0,`rgba(255,220,0,${p.life})`);
+        g.addColorStop(.4,`rgba(255,80,0,${p.life*.7})`);
+        g.addColorStop(1,'rgba(200,0,0,0)');
+        ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fillStyle=g;ctx.fill();
+      });
+      if(document.body.classList.contains('day-mode'))requestAnimationFrame(frame);
+      else ctx.clearRect(0,0,60,120);
+    }
+    frame();
+    // إعادة تشغيل لما يتفعل وضع النهار
+    const obs=new MutationObserver(()=>{if(document.body.classList.contains('day-mode'))frame()});
+    obs.observe(document.body,{attributeFilter:['class']});
+  });
+}
+document.addEventListener('DOMContentLoaded',initFlames);
+setTimeout(initFlames,1000);
+
+
+function triggerUpload(id){document.getElementById(id).click()}
+
+function handlePhoto(input, type){
+  if(!input.files||!input.files[0])return;
+  const file=input.files[0];
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const dataUrl=e.target.result;
+    // حفظ في localStorage
+    localStorage.setItem('photo_'+type, dataUrl);
+    showPhoto(type, dataUrl);
+  };
+  reader.readAsDataURL(file);
+}
+
+function showPhoto(type, dataUrl){
+  const tile=document.getElementById(type==='before'?'beforeTile':'afterTile');
+  const content=document.getElementById(type==='before'?'beforeContent':'afterContent');
+  const clearBtn=document.getElementById(type==='before'?'clearBeforeBtn':'clearAfterBtn');
+  // شيل المحتوى القديم
+  const oldImg=tile.querySelector('img');
+  if(oldImg)oldImg.remove();
+  const oldLabel=tile.querySelector('.upload-tile-label');
+  if(oldLabel)oldLabel.remove();
+  // اخبى النص
+  content.style.display='none';
+  // ضيف الصورة
+  const img=document.createElement('img');
+  img.src=dataUrl;
+  tile.appendChild(img);
+  // ضيف label
+  const lbl=document.createElement('div');
+  lbl.className='upload-tile-label';
+  lbl.textContent=type==='before'?'📸 قبل':'⚡ بعد';
+  tile.appendChild(lbl);
+  // ضيف زرار الحذف
+  if(clearBtn)clearBtn.style.display='inline-block';
+}
+
+function clearPhoto(type){
+  localStorage.removeItem('photo_'+type);
+  const tile=document.getElementById(type==='before'?'beforeTile':'afterTile');
+  const content=document.getElementById(type==='before'?'beforeContent':'afterContent');
+  const clearBtn=document.getElementById(type==='before'?'clearBeforeBtn':'clearAfterBtn');
+  const oldImg=tile.querySelector('img');
+  if(oldImg)oldImg.remove();
+  const oldLabel=tile.querySelector('.upload-tile-label');
+  if(oldLabel)oldLabel.remove();
+  content.style.display='flex';
+  if(clearBtn)clearBtn.style.display='none';
+  // reset input
+  const input=document.getElementById(type==='before'?'beforeInput':'afterInput');
+  if(input)input.value='';
+}
+
+// تحميل الصور المحفوظة
+(function(){
+  ['before','after'].forEach(type=>{
+    const saved=localStorage.getItem('photo_'+type);
+    if(saved)showPhoto(type,saved);
+  });
+})();
+
+// حفظ بيانات التمارين الجاهزة
+function getPlanData(){return JSON.parse(localStorage.getItem('planData')||'{}')}
+function savePlanData(d){localStorage.setItem('planData',JSON.stringify(d))}
+
+function updatePlanEx(planKey, exName, field, val){
+  const d=getPlanData();
+  if(!d[planKey])d[planKey]={};
+  if(!d[planKey][exName])d[planKey][exName]={weight:0,sets:3,reps:10};
+  const old=JSON.parse(JSON.stringify(d[planKey][exName]));
+  d[planKey][exName][field]=parseFloat(val)||0;
+  // تحقق من التطور
+  const cur=d[planKey][exName];
+  if(field==='weight'&&cur.weight>old.weight&&old.weight>0){
+    showProgressMsg('🔥 عاش يا فحل! انت بتتطور في '+exName+' +' +(cur.weight-old.weight)+' كجم 💪');
+    updateProgressFromPlan(exName,cur.weight,cur.reps);
+  } else if(field==='reps'&&cur.reps>old.reps&&old.reps>0){
+    showProgressMsg('🔥 عاش يا فحل! زدت عدات في '+exName+' 💪');
+    updateProgressFromPlan(exName,cur.weight,cur.reps);
+  }
+  savePlanData(d);
+  refreshPlanExRow(planKey, exName);
+  buildProgressTable();
+}
+
+function updateProgressFromPlan(exName,weight,reps){
+  const u=ud();
+  if(!u.exerciseHistory)u.exerciseHistory={};
+  const k=exName.trim().toLowerCase();
+  const prev=u.exerciseHistory[k];
+  if(!prev||weight>=prev.weight){
+    u.exerciseHistory[k]={name:exName,weight:weight,reps:reps};
+    sUD(u);
+  }
+}
+
+function refreshPlanExRow(planKey, exName){
+  const d=getPlanData();
+  const cur=(d[planKey]&&d[planKey][exName])||{weight:0,sets:3,reps:10};
+  const u=ud();
+  const hist=u.exerciseHistory||{};
+  const k=exName.trim().toLowerCase();
+  const prev=hist[k];
+  const rowId='planrow_'+planKey+'_'+exName.replace(/\s/g,'_');
+  const el=document.getElementById(rowId);
+  if(!el)return;
+  let prog='';
+  if(prev&&cur.weight>prev.weight)prog='<span class="plan-ex-prog up">⬆️ +' +(cur.weight-prev.weight)+' كجم</span>';
+  else if(prev&&cur.reps>prev.reps)prog='<span class="plan-ex-prog up">⬆️ +عدات</span>';
+  else if(prev)prog='<span class="plan-ex-prog same">= ثابت</span>';
+  el.querySelector('.plan-ex-prog-wrap').innerHTML=prog;
+}
+
+function makePlanExHTML(planKey, exercises){
+  const d=getPlanData();
+  const u=ud();
+  const hist=u.exerciseHistory||{};
+  const accId='acc_'+planKey;
+  let rows='';
+  exercises.forEach(ex=>{
+    const saved=(d[planKey]&&d[planKey][ex])||{weight:0,sets:3,reps:10};
+    const k=ex.trim().toLowerCase();
+    const prev=hist[k];
+    let prog='';
+    if(prev&&saved.weight>prev.weight)prog='<span class="plan-ex-prog up">⬆️ +' +(saved.weight-prev.weight)+' كجم</span>';
+    else if(prev&&saved.reps>prev.reps)prog='<span class="plan-ex-prog up">⬆️ +عدات</span>';
+    else if(prev)prog='<span class="plan-ex-prog same">= ثابت</span>';
+    const rowId='planrow_'+planKey+'_'+ex.replace(/\s/g,'_');
+    rows+=`<div class="plan-ex-row" id="${rowId}">
+      <span class="plan-ex-name">🏋️ ${ex}</span>
+      <span class="plan-ex-prog-wrap">${prog}</span>
+      <div class="plan-ex-inputs">
+        <div style="text-align:center"><input class="plan-ex-inp" type="number" value="${saved.weight}" min="0" step="2.5" onchange="updatePlanEx('${planKey}','${ex}','weight',this.value)"><div class="plan-ex-lbl">كجم</div></div>
+        <div style="text-align:center"><input class="plan-ex-inp" type="number" value="${saved.sets}" min="1" max="10" onchange="updatePlanEx('${planKey}','${ex}','sets',this.value)"><div class="plan-ex-lbl">سيت</div></div>
+        <div style="text-align:center"><input class="plan-ex-inp" type="number" value="${saved.reps}" min="1" max="50" onchange="updatePlanEx('${planKey}','${ex}','reps',this.value)"><div class="plan-ex-lbl">عدة</div></div>
+      </div>
+    </div>`;
+  });
+  return `<div class="plan-ex-accordion">
+    <button class="plan-ex-acc-btn" onclick="toggleAcc('${accId}',this)">
+      <span>📋 التمارين (${exercises.length})</span>
+      <span class="acc-arrow">▼</span>
+    </button>
+    <div class="plan-ex-acc-body" id="${accId}">${rows}</div>
+  </div>`;
+}
+
+function toggleAcc(id, btn){
+  const body=document.getElementById(id);
+  if(!body)return;
+  body.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
+// تعريف التمارين لكل نظام ويوم
+const PLAN_EXERCISES={
+  ppl2:{
+    push:['بنش بريس بار','فلاي كابل علوي','بنش بريس دمبلز مائل','دبس ضيق','بوش داون كابل','شولدر برس دمبلز'],
+    pull:['ديد ليفت','سحب بار واسع','سحب كابل ضيق','كيبل رو','كيبل فيس بول','كيبل كيرل','هامر كيرل'],
+    legs:['سكوات بار','ليج بريس','ليج كيرل','ليج إكستنشن','كاف ريز','بلانك','كرانش']
+  },
+  brosplit:{
+    chest_tri:['بنش بريس بار','فلاي كابل علوي','بنش بريس مائل دمبلز','دبس ضيق','بوش داون كابل','اوفر هيد تراي كابل'],
+    back_bi:['ديد ليفت','سحب بار واسع','كيبل رو ضيق','سحب كابل أمامي','كيبل كيرل','هامر كيرل','كنسنتريشن كيرل'],
+    sh_ar_p:['شولدر برس بار','شولدر برس دمبلز','لاترال ريز','فرونت ريز','ريير ديلت فلاي','باي بار كيرل','إينكلاين كيرل'],
+    legs_p:['سكوات بار','ليج بريس','ليج كيرل','ليج إكستنشن','كاف ريز','كرانش','هيل تاتش']
+  },
+  upperlower:{
+    ul_upper:['بنش بريس بار','سحب بار واسع','شولدر برس دمبلز','كيبل رو','كيبل كيرل','بوش داون كابل'],
+    ul_lower:['سكوات بار','ليج بريس','ليج كيرل','ليج إكستنشن','كاف ريز','بلانك']
+  },
+  arnold:{
+    ch_bk:['بنش بريس بار','فلاي دمبلز','ديد ليفت','سحب بار واسع','كيبل رو ضيق'],
+    sh_ar:['شولدر برس أرنولد','لاترال ريز','فرونت ريز','باي بار كيرل','دبس ضيق','هامر كيرل'],
+    lg_ab:['سكوات بار','ليج بريس','ليج كيرل','كاف ريز','كرانش','بلانك']
+  }
+};
+
+function initPlanExercises(){
+  // PPL
+  const mapPPL={push:'pt_ppl2_push',pull:'pt_ppl2_pull',legs:'pt_ppl2_legs'};
+  Object.keys(mapPPL).forEach(day=>{
+    const el=document.getElementById(mapPPL[day]);
+    if(el)el.innerHTML=makePlanExHTML('ppl2_'+day, PLAN_EXERCISES.ppl2[day]||[]);
+  });
+  // برو اسبلت
+  const mapBro={chest_tri:'pt_bro_chest',back_bi:'pt_bro_back',sh_ar_p:'pt_bro_sh',legs_p:'pt_bro_legs'};
+  Object.keys(mapBro).forEach(day=>{
+    const el=document.getElementById(mapBro[day]);
+    if(el)el.innerHTML=makePlanExHTML('brosplit_'+day, PLAN_EXERCISES.brosplit[day]||[]);
+  });
+  // علوي سفلي
+  const mapUL={ul_upper:'pt_ul_upper',ul_lower:'pt_ul_lower'};
+  Object.keys(mapUL).forEach(day=>{
+    const el=document.getElementById(mapUL[day]);
+    if(el)el.innerHTML=makePlanExHTML('upperlower_'+day, PLAN_EXERCISES.upperlower[day]||[]);
+  });
+  // أرنولد
+  document.getElementById('pt_arn_ch') && (document.getElementById('pt_arn_ch').innerHTML=makePlanExHTML('arnold_ch_bk', PLAN_EXERCISES.arnold.ch_bk||[]));
+  document.getElementById('pt_arn_sh') && (document.getElementById('pt_arn_sh').innerHTML=makePlanExHTML('arnold_sh_ar', PLAN_EXERCISES.arnold.sh_ar||[]));
+  document.getElementById('pt_arn_lg') && (document.getElementById('pt_arn_lg').innerHTML=makePlanExHTML('arnold_lg_ab', PLAN_EXERCISES.arnold.lg_ab||[]));
+}
+document.addEventListener('DOMContentLoaded', initPlanExercises);
+setTimeout(initPlanExercises, 800);
+
 </script>
 </body>
 </html>
